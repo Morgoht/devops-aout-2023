@@ -1,22 +1,20 @@
-const passwordVerification = require ('../password_verification')
+const passwordVerification = require("../password_verification");
 
-describe('test for password verification', () => {
-    
+describe("test for password verification", () => {
     it("should return false has not contain letter or number", () => {
-        const resultPassword = passwordVerification("1234567")
+        const resultPassword = passwordVerification("1234567");
         expect(resultPassword).toBe(false);
     });
     it("should return false has not contain letter or number", () => {
-        const resultPassword = passwordVerification("12345678@")
+        const resultPassword = passwordVerification("12345678@");
         expect(resultPassword).toBe(false);
     });
     it("should return false has not contain letter or number", () => {
-        const resultPassword = passwordVerification("azerivjec@a")
+        const resultPassword = passwordVerification("azerivjec@a");
         expect(resultPassword).toBe(false);
     });
     it("should return false has not contain letter or number", () => {
-        const resultPassword = passwordVerification("12345678@a")
+        const resultPassword = passwordVerification("12345678@a");
         expect(resultPassword).toBe(true);
     });
-    
-})
+});
