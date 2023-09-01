@@ -10,6 +10,14 @@ module.exports = function (password) {
         return false;
       }
     
-        return true;
+      const contientLettre = /[a-zA-Z]/;
+      const contientChiffre = /[0-9]/;
+      if (!contientLettre.test(password) || !contientChiffre.test(password)) {
+        return false;
+      }
+    
+      // Si toutes les conditions sont remplies, le mot de passe est valide
+      return true;
+    
     
 }
